@@ -1,0 +1,363 @@
+<!DOCTYPE HTML>
+<html>
+<link rel="stylesheet" href="mixedstyle.css">
+<meta charset="UTF-8">
+<title>Garbo's webpage</title>
+<link rel="stylesheet" href="jquery-ui-1.10.4.custom.css">
+<script src="//code.jquery.com/jquery-1.9.1.js"></script>
+<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<link rel="stylesheet" href="/resources/demos/style.css">
+
+  <script>
+   $(document).ready(function() {
+ 
+  $(function() {
+    $( "#progressbar" ).progressbar({
+      value: 37
+    });
+    $( "#tabs" ).tabs();
+  });
+  function displayDate()
+  {
+  document.getElementById("time").innerHTML=Date();
+  }
+
+      $("#userInfo").change(function() {
+      $.ajax({
+        url: 'userInfo.php',
+        data: {userInfo: $("#userInfo").val()},
+        success: function(data) {
+          $("#infoTable").html(data);
+        }
+        
+      });
+      
+    });
+      $("#actorInfo").change(function() {
+      $.ajax({
+        url: 'actorInfo.php',
+        data: {actorInfo: $("#actorInfo").val()},
+        success: function(data) {
+          $("#actorTable").html(data);
+        }
+        
+      });
+      
+    });
+
+  });
+  </script>
+<body>
+
+<div id="container">
+
+<div id="header">
+<p>Garbo Cheng <br>
+ email id: gc2bt@virginia.edu</p>
+</div>
+
+<div id="progress">
+<h2 class="demoHeaders">Progress:</h2>
+<div id="progressbar"></div>
+</div>
+
+
+<div class="menu">
+<strong>Menu:</strong>
+<a class ="menu" href="#math">Math?</a>
+<a class ="menu" href="#tabs">Comedy(Actors)</a>
+<a class ="menu" href="#picture">Cville-Movies</a>
+<a class ="menu" href="#comedyCentral">ComedyCentral</a>
+<a class ="menu" href="#canvas">Canvas</a>
+<a class ="menu" href="#video">Comedy(Video)</a>
+<a class ="menu" href="#map">Location/Date-Time</a>
+</div>
+
+<div id="objective">
+<strong>Objective:</strong>
+<p> I will keep track of the number of movies that people have seen for my favorite comedy actors. My favorite comedy actors are: Will Ferrell, Ben Stiller, Jim Carrey, Adam Sandler, and Steve Carell. Also, I will be taking in votes to see who of the five actors people like the most.</p>
+</div>
+
+<div id="math">
+  <h3> ARITHMETICS FUNCTIONS</h3>
+    <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+      <input type="range" id="a" max="1000" value="0">
+      +<input type="number" id="b" value="0">
+      =<output name="x" for="a b"></output>
+      </form>
+    <form oninput="y.value=parseInt(c.value)-parseInt(d.value)">
+      <input type="number" id="c" value="0">
+      -<input type="number" id="d" value="0">
+      =<output name="y" for="c d"></output>
+      </form>
+    <form oninput="z.value=parseInt(e.value)/parseInt(f.value)">
+      <input type="number" id="e" value="0">
+      /<input type="number" id="f" value="0">
+      =<output name="z" for="e f"></output>
+        </form>
+    <form oninput="t.value=parseInt(g.value)*parseInt(h.value)">
+      <input type="number" id="g" value="0">
+      *<input type="number" id="h" value="0">
+      =<output name="t" for="g h"></output>
+        </form>
+  </div>
+
+
+
+<div id="tabs">
+  <ul>
+    <li><a href="#tabs-1">Adam Sandler</a></li>
+    <li><a href="#tabs-2">Ben Stiller</a></li>
+    <li><a href="#tabs-3">Jim Carrey</a></li>
+    <li><a href="#tabs-4">Steve Carell</a></li>
+    <li><a href="#tabs-5">Will Ferrelll</a></li>
+  </ul>
+  <div id="tabs-1">
+    <p class="info">
+       <a target="_blank" href= "http://en.wikipedia.org/wiki/Adam_Sandler"><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Adam_Sandler_2011_%28Cropped%29.jpg/220px-Adam_Sandler_2011_%28Cropped%29.jpg" alt="google.com" width="200" height="200"></a><br>
+      Adam Richard Sandler (born September 9, 1966) is an American actor, comedian, screenwriter, and film producer. After becoming a Saturday Night Live cast member, Sandler went on to star in many Hollywood feature films that combined have grossed over $2 billion at the box office.He is best known for his comedic roles, such as in the films Billy Madison (1995), Happy Gilmore (1996), The Waterboy (1998), Big Daddy (1999), and Mr. Deeds (2002), though he has ventured into more dramatic territory with his roles in Punch-Drunk Love (2002), Reign Over Me (2007), and Funny People (2009). In 1999, Sandler founded Happy Madison Productions, a film and television production company that has produced numerous films and developed the 2007 television series Rules of Engagement. He is estimated to have a net worth of $300 million.</p>
+  </div>
+  <div id="tabs-2">
+    <p class="info">
+      <a target="_blank" href= "http://en.wikipedia.org/wiki/Ben_Stiller"><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Ben_Stiller_2010_%28Cropped%29.jpg/220px-Ben_Stiller_2010_%28Cropped%29.jpg" alt="google.com" width="200" height="200"></a><br>
+      Benjamin Edward "Ben" Stiller (born November 30, 1965) is an American actor, comedian, voice actor, screenwriter, film director, and producer. He is the son of veteran comedians and actors Jerry Stiller and Anne Meara. After beginning his acting career with a play, Stiller wrote several mockumentaries, and was offered his own show entitled The Ben Stiller Show, which he produced and hosted for its entire run: 13 episodes. Having previously acted in television, he began acting in films; he made his directorial debut with Reality Bites. Throughout his career he has written, starred in, directed, and/or produced over 50 films, including The Secret Life of Walter Mitty, Zoolander, There's Something About Mary, Meet the Parents, DodgeBall, Tropic Thunder, the Madagascar series, Night at the Museum, and the sequel Night at the Museum: Battle of the Smithsonian. In addition, he has had multiple cameos in music videos, television shows, and films.</p>
+  </div>
+  <div id="tabs-3">
+    <p class="info">
+      <a target="_blank" href= "http://en.wikipedia.org/wiki/Jim_Carrey"><img src="http://upload.wikimedia.org/wikipedia/commons/8/8b/Jim_Carrey_2008.jpg" alt="google.com" width="200" height="200"></a><br>
+      James Eugene "Jim" Carrey (born January 17, 1962) is a Canadian American actor, comedian, and producer. Carrey has received four Golden Globe Award nominations, winning two. Known for his highly energetic slapstick performances, he has been described as one of the biggest movie stars in Hollywood. Carrey first gained recognition in 1990 after landing a recurring role in the sketch comedy In Living Color. His first leading roles in major productions came with Ace Ventura: Pet Detective (1994), Dumb and Dumber (1994), The Mask (1994), and Ace Ventura: When Nature Calls (1995). In 1997, he gave a critically acclaimed performance in Liar Liar, which earned him a Golden Globe Award nomination for Best Actor. He then starred in The Truman Show (1998) and Man on the Moon (1999), with each garnering him a Golden Globe Award for Best Actor.</p>
+  </div>
+    <div id="tabs-4">
+    <p class="info">
+      <a target="_blank" href= "http://en.wikipedia.org/wiki/Steve_Carell"><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Steve_Carell_2_2013.jpg/220px-Steve_Carell_2_2013.jpg" alt="google.com" width="200" height="200"></a><br>
+      Steven John "Steve" Carell (born August 16, 1962) is an American actor, comedian, director, producer, writer, and voice artist. After a five-year stint on The Daily Show with Jon Stewart, Carell found greater fame in the late 2000s for playing Michael Scott on the American version of The Office. He has also starred in lead roles in the films The 40-Year-Old Virgin, Little Miss Sunshine, Evan Almighty, Dan in Real Life, Get Smart, Date Night, Dinner for Schmucks, Crazy, Stupid, Love, Seeking a Friend for the End of the World, and The Way Way Back, and voiced characters in the animated films Over the Hedge, Horton Hears a Who!, Despicable Me and Despicable Me 2. Carell was nominated as "America's funniest man" in Life magazine, and received a Golden Globe Award for Best Actor in a Television Comedy Series for his work on The Office.</p>
+  
+  </div>
+    <div id="tabs-5">
+    <p class="info">
+      <a target="_blank" href= "http://en.wikipedia.org/wiki/Will_Ferrell"><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Will_Ferrell_2013.jpg/384px-Will_Ferrell_2013.jpg" alt="google.com" width="200" height="200"></a><br>
+      John William "Will" Ferrell (born July 16, 1967)[2] is an American comedian, impressionist, actor, producer, and writer. Ferrell first established himself in the mid-1990s as a cast member on the NBC sketch comedy show Saturday Night Live, and has subsequently starred in the comedy films Old School, Elf, Anchorman, Talladega Nights, Stranger than Fiction, Blades of Glory, Semi-Pro, Step Brothers, and The Other Guys. He is considered a member of the "Frat Pack", a generation of leading Hollywood comic actors who emerged in the late 1990s and the 2000s, including Jack Black, Ben Stiller, Steve Carell, Vince Vaughn, and brothers Owen and Luke Wilson.</p>
+ 
+    </div>
+  </div>
+
+
+
+
+<div id= "picture">
+  <h2>Comedy Movies in Charlottesville:</h2>
+<div class="img">
+<a target="_blank" href= "http://s1.evcdn.com/images/movieposter153by229/movies/129636/129636_aa.jpg"><img src="http://s1.evcdn.com/images/movieposter153by229/movies/129636/129636_aa.jpg" alt="google.com" width="120" height="200"></a>
+ <div class="desc">American Hustle</div>
+</div>
+
+<div class="img">
+<a target="_blank" href= "http://image.cinemaclock.com/images/posters/140x210/74/36874-her__2013_-u.jpg"><img src="http://image.cinemaclock.com/images/posters/140x210/74/36874-her__2013_-u.jpg" alt="google.com" width="120" height="200"></a>
+ <div class="desc">Her</div>
+</div>
+
+
+
+<div class="img">
+<a target="_blank" href= "http://s1.evcdn.com/images/movieposter153by229/movies/129201/129201_ab.jpg"><img src="http://s1.evcdn.com/images/movieposter153by229/movies/129201/129201_ab.jpg" alt="google.com" width="120" height="200"></a>
+ <div class="desc">Frozen</div>
+</div>
+
+<div class="img">
+<a target="_blank" href= "http://s1.evcdn.com/images/movieposter153by229/movies/129187/129187_ab.jpg" ><img src="http://s1.evcdn.com/images/movieposter153by229/movies/129187/129187_ab.jpg" alt="google.com" width="120" height="200"></a>
+ <div class="desc">August: Osage County</div>
+</div>
+
+<div class="img">
+<a target="_blank" href= "http://s1.evcdn.com/images/movieposter153by229/movies/130537/130537_aa.jpg"><img src="http://s1.evcdn.com/images/movieposter153by229/movies/130537/130537_aa.jpg" alt="google.com" width="120" height="200"></a>
+ <div class="desc">The Nut Job</div>
+</div>
+
+<div class="img">
+<a target="_blank" href= "http://movies.eventful.com/ride-along-/M0-001-000052212-1/showtimes"><img src="http://s1.evcdn.com/images/movieposter153by229/movies/130330/130330_aa.jpg" alt="google.com" width="120" height="200"></a>
+ <div class="desc">Ride Along</div>
+</div>
+
+  </div>
+
+
+
+<div id="comedyCentral">
+  <h2>Like Comedy Central TV?</h2>
+  <p> Click <a href="http://www.comedycentral.com/" target="comedy_frame">HERE</a> to activate if an error occurs!</p>
+<iframe src="http://www.comedycentral.com/" name="comedy_frame" width="600" height="300"></iframe>
+</div>
+
+
+
+
+
+<div id= "canvas">
+<p> TESTING CANVAS </p>
+<canvas id="myCanvas" width="400" height="100">
+</canvas>
+<script>
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+
+// Create gradient
+var grd=ctx.createLinearGradient(0,0,200,0);
+grd.addColorStop(0,"red");
+grd.addColorStop(1,"blue");
+ctx.font="30px Arial";
+ctx.strokeText("<==Rectangle",200,50);
+// Fill with gradient
+ctx.fillStyle=grd;
+ctx.fillRect(10,10,150,80);
+</script>
+</div>
+
+
+
+<div id="video">
+<h2> MadTv Substitute Teacher Video!!!</h2>
+<embed width="640" height="360" src="http://www.youtube.com/v/Dd7FixvoKBw">
+<br>
+</div>
+
+<div id="map">
+<p id ="demo"> Click on the button below for your coordinates and map location:</p>
+<button onclick ="getLocation()">Location!</button>
+<div id="mapLocation"></div>
+
+<p>Click the button below to know today's date and time!</p>
+
+<button onclick="displayDate()">Try it</button>
+
+<p id="time"></p>
+</div>
+
+<div id= "dragBox">
+  <p>Drag the cavalier into any of the rectangles:</p>
+<div id="dImage" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="dImage2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<img id="dragIt" src="http://www.theesportsblog.com/wp-content/uploads/2012/01/Virginia_Cavaliers_Logo.jpg" draggable="true" ondragstart="drag(event)" alt="google.com" width="330" height="400">
+</div>
+
+<div id ="form1"> First time? Insert info below please!<br>
+<form action="insertINTO.php" method="post">
+  <table>
+    <tr>
+        <td> Your Name:<input type="text" name="user"/></td>
+    </tr>
+    <tr>
+        <td> # of Adam Sandler Movies Seen:<input type="number" name="Adam"/></td>
+    </tr>
+    <tr>
+        <td> # of Ben Stiller Movies Seen:<input type="number" name="Ben"/></td>
+    </tr>
+    <tr>
+        <td> # of Jim Carrey Movies Seen:<input type="number" name="Jim"/></td>
+    </tr>
+        <tr>
+        <td> # of Steve Carrell Movies Seen:<input type="number" name="Steve"/></td>
+    </tr>
+    <tr>
+        <td> # of Will Ferrell Movies Seen:<input type="number" name="Will"/></td>
+    </tr>
+
+</table>
+<button type="submit">Submit!</button>
+</form>
+</div>
+
+<div id="Table">
+Insert your name to get your information: <input type="text" id="userInfo" name="userInfo"><br>
+</div>
+<div id="infoTable">The information goes here!</div>
+
+<div id ="formUpdate"> Need to update your information?<br>
+<form action="update.php" method="get">
+  <table>
+    <tr>
+        <td> Your Name:<input type="text" name="user"/></td>
+    </tr>
+    <tr>
+        <td> # of Adam Sandler Movies Seen:<input type="number" name="Adam"/></td>
+    </tr>
+    <tr>
+        <td> # of Ben Stiller Movies Seen:<input type="number" name="Ben"/></td>
+    </tr>
+    <tr>
+        <td> # of Jim Carrey Movies Seen:<input type="number" name="Jim"/></td>
+    </tr>
+        <tr>
+        <td> # of Steve Carrell Movies Seen:<input type="number" name="Steve"/></td>
+    </tr>
+    <tr>
+        <td> # of Will Ferrell Movies Seen:<input type="number" name="Will"/></td>
+    </tr>
+
+</table>
+<button type="submit">Submit!</button>
+</form>
+</div>
+
+
+<div id="Voters">
+Choose your favorite actor and then click Vote!<br>
+<form id="voting" action="insertVote.php" method="post">
+<select name="actor">
+<option value="Adam">Adam Sandler</option>
+<option value="Ben">Ben Stiller</option>
+<option value="Jim">Jim Carrey</option>
+<option value="Steve">Steve Carell</option>
+<option value="Will">Will Ferrell</option>
+</select>
+<button type="submit">Vote!</button>
+</form>
+</div>
+
+
+<div id="Table3">
+Insert your actor's name to see how many people voted for him (Options: Adam, Ben, Jim, Steve and Will): <input type="text" id="actorInfo" name="actorInfo"><br><br>
+</div>
+<div id="actorTable">The actor information goes here!</div>
+
+
+<div class="footer">
+  <a class="footer" href="http://stardock.cs.virginia.edu/cs4720/">CS4720 webpage
+  </a>
+<a class= "footer" href="#header">Return to the Top</a>
+<p>Credits to: </p>
+<a class= "credit" href="http://www.w3schools.com/">W3School</a>
+<a class= "credit" href="http://jquery.com/">JQuery</a>
+<a class= "credit" href= "https://www.wikipedia.org/">Wikipedia</a>
+</div>
+
+</div>
+
+
+
+<script>
+var x=document.getElementById("demo");
+function getLocation()
+  {
+  if (navigator.geolocation)
+    {
+    navigator.geolocation.getCurrentPosition(showPosition);
+    }
+  else{x.innerHTML="Geolocation is not supported by this browser.";}
+  }
+function showPosition(position)
+  {
+  x.innerHTML="Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;	
+   var pos=position.coords.latitude+","+position.coords.longitude;
+
+  var img_url="http://maps.googleapis.com/maps/api/staticmap?center="
+  +pos+"&zoom=14&size=400x300&sensor=false";
+  document.getElementById("mapLocation").innerHTML="<img src='"+img_url+"'>";
+  }
+ function showError(error)
+  {
+  switch(error.code) 
+    {
+    case error.PERMISSION_DENIED:
+  </script>
+    

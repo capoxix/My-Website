@@ -1,0 +1,224 @@
+div
+{
+overflow:auto;
+width:100%;
+}
+body{
+	background-color:blue;
+}
+
+#container{
+	width:1200px;
+}
+#header{
+	background-color:aqua;
+
+}
+#accordion{
+	background-color:blue;
+}
+
+h1{
+	margin-bottom:0;
+	text-align:center;
+}
+.menu{
+	background-color:DodgerBlue;
+	height:30px;
+	text-align:center;
+	word-spacing:30px;
+}
+a.menu{
+	padding: 5px 10px;
+	font-family:Times;
+	color:#000000;
+}
+a.menu:hover{
+	color:#A32B3A;
+	-webkit-transition-property:background;
+	-webkit-transition-duration:1.5s;
+	-webkit-transition-timing-function: ease;
+}
+aside{
+	float:right;
+}
+#objective{
+	float:left;
+	background-color:aqua;
+	width:599px;
+	height:186px;
+	border:1px black;
+	
+}
+
+h3{
+	text-align:center;
+}
+
+#math{
+	background-color:aqua;
+	float:right;
+	width:600px;
+	height:186px;
+}
+
+input{
+	margin-right:50px;
+	margin-left: 50px;
+	width: 150px;
+}
+#image{
+	margin-left:auto;
+	margin-right:auto;
+	display:block;
+	transform: skew(10deg,10deg)
+	-ms-transform:skew(10deg,10deg);
+	-webkit-transform: skew(10deg,10deg);
+}
+#picture{
+	background-color:DodgerBlue;
+	height:350px;
+}
+h2.demoHeaders{
+	float:left;
+}
+div.img
+{
+  margin: 30px;
+  padding: 5px;
+  border: 1px solid #0000ff;
+  height: auto;
+  width: auto;
+  float: left;
+  text-align: center;
+  background:black;
+  margin-bottom:10px;
+}
+
+div.img a:hover img {
+	border: 1px solid white;
+}
+.desc{
+	color:white;
+  }
+#comedyCentral{
+	float:right;
+	background-color:aqua;
+	margin-left:auto;
+	margin-right:auto;
+	display:block;
+	height:425px;
+}
+h2{
+	text-align:center;
+}
+p{
+	text-align:center;
+}
+iframe{
+	margin-left:auto;
+	margin-right:auto;
+	display:block;
+}
+
+#myCanvas{
+	border:1px solid #000000;
+	margin-left:auto;
+	margin-right:auto;
+	display:block;
+	
+}
+
+#canvas{
+	background-color:DodgerBlue;
+	height:170px;
+}
+#video{
+	background-color:aqua;
+}
+embed{
+	margin-left:auto;
+	margin-right:auto;
+	display:block;
+}
+button{
+	margin-left:auto;
+	margin-right:auto;
+	display:block;
+}
+input{
+	text-align:middle;
+}
+#map{
+	background-color:DodgerBlue;
+}
+#dImage {width:340px;
+	height:410px;
+	padding:10px;
+	border:1px 
+	solid #aaaaaa;
+	float:left;
+	margin-right:50px;
+	background-color:white;
+}
+#dImage2 {width:340px;
+	height:410px;
+	padding:10px;
+	border:1px 
+	solid #aaaaaa;
+	float:left;
+	margin-right:50px;
+	background-color:white;
+}
+#dragBox{
+	background-color:aqua;
+}
+ #droppable { width: 150px; 
+  		height: 150px; 
+  		padding: 0.5em; 
+  		float: left; 
+  		margin: 10px; 
+  	}
+#form1{
+	background-color:DodgerBlue;
+}
+#formUpdate{
+	background-color:DodgerBlue;
+}
+#Table{
+	background-color:Aqua;
+}
+
+#infoTable{
+	background-color:Aqua;
+}
+
+.footer{
+	background-color:orange;
+	clear:both;
+	text-align:center;
+	word-spacing:1px; 
+}
+
+#Voters{
+	background-color:aqua;
+}
+#Table3{
+	background-color:DodgerBlue;
+}
+#actorTable{
+	background-color:DodgerBlue;
+}
+#voting{
+	margin:auto;
+}
+a.footer{
+	padding: 5px 10px;
+	font-family:Times;
+	color:#000000;
+}
+a.footer:hover{
+	color:#A32B3A;
+	-webkit-transition-property:background;
+	-webkit-transition-duration:1.5s;
+	-webkit-transition-timing-func
